@@ -36,7 +36,7 @@ class ContactController extends Controller
         */
 
         // Option 2: Using Mailable Class (recommended)
-        Mail::to('muhammednajeeb632@gmail.com')->send(new ContactForm($data));
+        Mail::to('info@aeqdefense.com')->send(new ContactForm($data));
 
         return redirect()->route('contact')->with('success', 'Your message has been sent successfully!');
     } catch (\Exception $e) {
