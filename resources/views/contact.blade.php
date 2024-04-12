@@ -44,19 +44,19 @@
                 <form action="{{route('contact-submit')}}" method="POST">
                     @csrf
                     <h4 class="fw-bold fs-5 mb-3">Message Us</h4>
-                    <input class="mb-2 p-2 w-100 border" placeholder="Name" type="text" name="name"><br>
+                    <input class="mb-2 p-2 w-100 border" placeholder="Name" type="text" name="name"  title="Enter your name"><br>
                     @error('name')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
-                    <input class="mb-2 p-2 w-100 border" placeholder="Email" type="email" name="email"><br>
+                    <input class="mb-2 p-2 w-100 border" placeholder="Email" type="email" name="email" title="Enter valid email-id"><br>
                     @error('email')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
-                    <input class="mb-2 p-2 w-100 border" placeholder="Phone" type="tel" name="mobile"><br>
+                    <input class="mb-2 p-2 w-100 border" placeholder="Phone" type="tel" name="mobile" pattern="[0-9]" title="Enter phone number"><br>
                     @error('mobile')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
-                    <input class="mb-2 p-2 pb-4 w-100 border" placeholder="Message" type="text" name="message"><br>
+                    <input class="mb-2 p-2 pb-4 w-100 border" placeholder="Message" type="text"  title="Enter message" name="message"><br>
                     @error('message')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
