@@ -52,7 +52,7 @@
                     @error('email')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
-                    <input class="mb-2 p-2 w-100 border" placeholder="Phone" type="tel" name="mobile" pattern="[0-9]" title="Enter phone number"><br>
+                    <input class="mb-2 p-2 w-100 border" placeholder="Phone" type="tel" name="mobile" title="Enter phone number"><br>
                     @error('mobile')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
