@@ -76,7 +76,7 @@
         <img src="{{asset('images/FUZE-1.png')}}" class="w-75" alt="...">
       </div>
       <h5>SAM 1 4OO</h5>
-      <p>The fuze incorporates exciting new state of the art technology using SFMCW, a proprietary technology ensuring height of ... <a href="{{('SAM14OO')}}">Read More ></a></p>
+      <p>The fuze incorporates exciting new state of the art technology using SFMCW, a proprietary technology ensuring height of ... <a href="{{route('SAM1400')}}">Read More ></a></p>
     </div>
   </div>
 </div>
