@@ -23,19 +23,7 @@ class ContactController extends Controller
     ]);
 
     try {
-        // Choose one of the following methods to send the email:
-
-        // Option 1: Using Mail Facade (without mailable class)
-        /*
-        $message = Mail::send([], $data, function ($message) use ($data) {
-            $message->to('recipient@example.com'); // Replace with your recipient email
-            $message->subject('Contact Form Submission from ' . $data['name']);
-            $message->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME')); // Optional
-            $message->setBody($this->buildEmailBody($data)); // Build email body with helper function
-        });
-        */
-
-        // Option 2: Using Mailable Class (recommended)
+        
         Mail::to('info@aeqdefense.com')->send(new ContactForm($data));
 
         return redirect()->route('contact')->with('success', 'Your message has been sent successfully!');
