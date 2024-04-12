@@ -20,6 +20,7 @@ class ContactController extends Controller
         'name' => 'required|string',
         'email' => 'required|email',
         'message' => 'required|string',
+        'mobile'   => 'numeric|nullable',
     ]);
 
     try {

@@ -45,9 +45,21 @@
                     @csrf
                     <h4 class="fw-bold fs-5 mb-3">Message Us</h4>
                     <input class="mb-2 p-2 w-100 border" placeholder="Name" type="text" name="name"><br>
+                    @error('name')
+                    <span class="text-danger">{{$message}}</span>
+                    @enderror
                     <input class="mb-2 p-2 w-100 border" placeholder="Email" type="email" name="email"><br>
+                    @error('email')
+                    <span class="text-danger">{{$message}}</span>
+                    @enderror
                     <input class="mb-2 p-2 w-100 border" placeholder="Phone" type="tel" name="mobile"><br>
+                    @error('mobile')
+                    <span class="text-danger">{{$message}}</span>
+                    @enderror
                     <input class="mb-2 p-2 pb-4 w-100 border" placeholder="Message" type="text" name="message"><br>
+                    @error('message')
+                    <span class="text-danger">{{$message}}</span>
+                    @enderror
                     <button type="submit" class="submit-btn text-white border-0 px-5 py-3">SUBMIT</button>
                 </form>
             </div>

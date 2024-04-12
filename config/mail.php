@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'default' => env(key:'MAIL_MAILER', default: 'smtp'),
+    'default' => env(key:'MAIL_MAILERS', default: 'smtp'),
 
     /*
     |--------------------------------------------------------------------------

@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 class ContactForm extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $data;
     /**
      * Create a new message instance.
      */
@@ -39,6 +39,10 @@ class ContactForm extends Mailable
      */
     public function content(): Content
     {
+        // dd(new Content(
+        //     view: 'emails.contact-form',  // Replace with your template name
+        //     with: ['data' => $this->data], // Pass data to the template
+        // ));
         return new Content(
             view: 'emails.contact-form',  // Replace with your template name
             with: ['data' => $this->data], // Pass data to the template
